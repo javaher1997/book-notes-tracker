@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ book.title }}</title>
+</head>
+<body>
+    <h1>{{ book.title }}</h1>
+    <p>Author: {{ book.author }}</p>
+
+    {% if book.description %}
+        <p>{{ book.description }}</p>
+    {% else %}
+        <p>No description available for this book.</p>
+    {% endif %}
+
+    <a href="{% url 'book_list' %}">Back to book list</a>
+</body>
+</html>
